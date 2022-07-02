@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>This is main page</title>
+        <style>
+            img {
+                height: 200px;
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="images" multiple />
+            <button>Upload</button>
+        </form>
+
+        <!-- 결과 이미지 url 프론트로 넘겨줌-->
+        {{result_image_path}}
+        <hr />
+
+        {%for img in images%}
+        <img src="{{img.images.url}}" alt="Image" />
+
+        {%endfor%}
+    </body>
+</html>
