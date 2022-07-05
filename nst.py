@@ -35,10 +35,6 @@ def change_image(first_file_name, second_file_name):
         img = img[tf.newaxis, :]
         return img
 
-    # 직접 작성되어야하는 부분
-    # content_path = "./golden_gate.jpg"
-    # style_path = "./starry_night.jpg"
-
     content_path = 'media/' + first_file_name
     style_path = 'media/' + second_file_name
 
