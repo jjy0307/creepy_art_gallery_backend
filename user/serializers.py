@@ -7,6 +7,7 @@ class UserSignupSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserModel
         fields = ["user_id", "password", "username"]
+        # extras = kwargs = {'username': {'required': False}}
 
     def create(self, *args, **kwargs):
         user = super().create(*args, **kwargs)

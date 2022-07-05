@@ -13,10 +13,12 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 
 
 class UserView(APIView):
-    # permission_classes = [permissions.IsAuthenticated]
+    def get(self, request):
+        return Response(UserSignupSerializer(request.user).data, status=status.HTTP_200_OK)
 
     # 회원가입
     def post(self, request):
+        print(request.data)
         serializer = UserSignupSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -43,6 +45,7 @@ class UserAPIView(APIView):
 
 class JwtTokenObtainPairView(TokenObtainPairView):
     serializer_class = JwtTokenObtainPairSerializer
+
     # 인가된 사용자만 접근할 수 있는 View 생성
 
 
@@ -55,7 +58,6 @@ class OnlyAuthenticatedUserView(APIView):
     def get(self, request):
         # Token에서 인증된 user만 가져온다.
         user = request.user
-        print(f"user 정보 : {user}")
         if not user:
             return Response({"error": "접근 권한이 없습니다."}, status=status.HTTP_401_UNAUTHORIZED)
         return Response({"message": "인증 성공!"})
