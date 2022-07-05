@@ -89,8 +89,12 @@ ROOT_URLCONF = 'third_project_backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        << << << < HEAD
         # 'DIRS': [os.path.join(BASE_DIR, "templates")],
         'DIRS': ['/Users/raymond/Documents/upload_image/testproject_2/third_project_frontend/templates'],
+        == == == =
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
+        >>>>>> > 18bbf95fb6f40ae7ce520143e32d7cb479264edc
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
