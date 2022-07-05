@@ -88,8 +88,7 @@ ROOT_URLCONF = 'third_project_backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        #'DIRS': [os.path.join(BASE_DIR, "templates")],
-        'DIRS': ['/Users/raymond/Documents/upload_image/testproject_2/third_project_frontend/templates'],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -196,9 +195,7 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
 
-# MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-
 # 인풋 사진 경로
-MEDIA_ROOT = '/Users/raymond/Documents/upload_image/testproject_2/media'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 MEDIA_URL = "/media/"

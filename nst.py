@@ -40,8 +40,8 @@ def change_image(first_file_name, second_file_name):
     # style_path = "./starry_night.jpg"
 
     # 인풋 사진들어가는 경로
-    content_path = '../media/'+first_file_name
-    style_path = '../media/'+second_file_name
+    content_path = 'media/'+first_file_name
+    style_path = 'media/'+second_file_name
 
     content_image = load_img(content_path)
     style_image = load_img(style_path)
@@ -55,9 +55,7 @@ def change_image(first_file_name, second_file_name):
     result_img = tensor_to_image(stylized_image)
 
     user_time = datetime.utcnow().strftime("%Y_%m_%d_%H_%M_%S")
-    
-    #결과물 저장되는 곳
-    result_img.save('/Users/raymond/Documents/upload_image/testproject_2/result_image'+user_time + ".jpg", "JPEG")
+    result_img.save(user_time + ".jpg", "JPEG")
     
     print("result end")
     #출력된 파일 이름
