@@ -54,9 +54,6 @@ def change_image(first_file_name, second_file_name):
     result_img = tensor_to_image(stylized_image)
 
     user_time = datetime.utcnow().strftime("%Y_%m_%d_%H_%M_%S")
-    # result_img.save(user_time + ".jpg", "JPEG")
-    # print("result end")
-    # 출력된 파일 이름
     file_name = user_time + ".jpg"
 
     return (result_img, file_name)
