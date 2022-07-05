@@ -5,3 +5,5 @@ custom_settings.py
 gh_settings.txt
 third_project_backend/settings.py
 media
+image/migrations
+user/migrations
