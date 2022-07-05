@@ -1,10 +1,17 @@
 from django.db import models
-from user.models import User
+from user.models import User as UserModel
+from datetime import datetime
+from django.utils import timezone
 # Create your models here.
 
 
-class Image(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    image = models.ImageField(null=False)
-    name = models.CharField(max_length=256)
+class ImageModel(models.Model):
+    # user = models.ForeignKey(UserModel, on_delete=models.CASCADE, default="")
+    title = models.CharField(max_length=256)
+    timestamp = models.DateTimeField(default=datetime.now(tz=timezone.utc))
     # like = models.ArrayField(null=False)
+    images = models.FileField(upload_to='pics')
+# 제목으로 파일을 구분할 수 있게
+
+    def __str__(self):
+        return str(self.title)
