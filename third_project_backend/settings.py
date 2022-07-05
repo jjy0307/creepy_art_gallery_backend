@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+import custom_settings
 from datetime import timedelta
 from pathlib import Path
 import os
@@ -88,7 +89,7 @@ ROOT_URLCONF = 'third_project_backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        #'DIRS': [os.path.join(BASE_DIR, "templates")],
+        # 'DIRS': [os.path.join(BASE_DIR, "templates")],
         'DIRS': ['/Users/raymond/Documents/upload_image/testproject_2/third_project_frontend/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -108,13 +109,12 @@ WSGI_APPLICATION = 'third_project_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-#DATABASES = {
+# DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
-#}
-import custom_settings
+# }
 
 DATABASES = custom_settings.DATABASES
 
@@ -196,14 +196,6 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
 
-<<<<<<< HEAD
-# 인풋 사진 경로
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-=======
-# MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-
-# 인풋 사진 경로
-MEDIA_ROOT = '/Users/raymond/Documents/upload_image/testproject_2/media'
->>>>>>> f96d7b01fa4e1b932be4616f1e3ee624d88b5630
 
 MEDIA_URL = "/media/"
