@@ -18,7 +18,6 @@ class UserView(APIView):
 
     # 회원가입
     def post(self, request):
-        print(request.data)
         serializer = UserSignupSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()

@@ -88,7 +88,7 @@ ROOT_URLCONF = 'third_project_backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        #'DIRS': [os.path.join(BASE_DIR, "templates")],
+        # 'DIRS': [os.path.join(BASE_DIR, "templates")],
         'DIRS': ['/Users/raymond/Documents/upload_image/testproject_2/third_project_frontend/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -108,15 +108,15 @@ WSGI_APPLICATION = 'third_project_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-#}
-import custom_settings
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+# import custom_settings
 
-DATABASES = custom_settings.DATABASES
+# DATABASES = custom_settings.DATABASES
 
 
 # Password validation
