@@ -30,14 +30,18 @@ def upload(request):
             first_image = str(request.FILES['photos_0'])
             first_image = "upload_image/" + first_image.replace(" ", "_")
             # 2번 사진 / 명화
-            # second_image = str(request.FILES['photos_0'])
-            # second_image = "upload_image/" + second_image.replace(" ", "_")
+            second_image = str(request.FILES['photos_1'])
+            second_image = "upload_image/" + second_image.replace(" ", "_")
 
+            # 1번 사진 / 기본
             default_storage.save(f'{first_image}', ContentFile(
                 request.FILES['photos_0'].read()))
+            # 2번 사진 / 명화
+            default_storage.save(f'{second_image}', ContentFile(
+                request.FILES['photos_1'].read()))
 
             ai_result_img, ai_result_name = change_image(
-                first_image, first_image)  # 여기에 first_image, second_image 넣어주세요
+                first_image, second_image)  # 여기에 first_image, second_image 넣어주세요
 
             ai_result_img.convert('RGB')
             ai_result_img.resize(ai_result_img.size, Image.ANTIALIAS)
