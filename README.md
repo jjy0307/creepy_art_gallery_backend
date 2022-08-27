@@ -17,11 +17,11 @@
 
 ### 개발 기간 : 2022.6.28 ~ 2022.7.6
 
-### Github [Front-end](https://github.com/SingToLive/creepy_art_gallery_frontend)
+### Github [Front-end](https://github.com/jjy0307/creepy_art_gallery_frontend)
 
 ## 🧑 **팀 구성**
 * 4인 팀 프로젝트  <br>
-* 맡은 역할 : lead developer / back-end developer / front-end developer
+* 맡은 역할 : AI Engineer
 
 <table>
   <tr>
