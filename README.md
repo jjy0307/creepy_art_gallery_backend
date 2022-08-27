@@ -1,37 +1,83 @@
+# 👻 **으스스~미술관**
 
-![](https://velog.velcdn.com/images/soyoyun/post/71ceea87-51b2-4e61-b832-fbbd68691ac7/image.png)
+## 목차
+1. 프로젝트 소개
+2. 팀 구성
+3. Stack
+4. Stack & Library Version
+5. 주요 기능
+6. TroubleShooting
+7. Architecture
+8. ERD
+9. API
+10. Layout
 
-# **으스스~미술관**
+## 📄 **프로젝트 소개**
+사진의 분위기가 밋밋하신가요? 그렇담 쌀쌀한 분위기를 연출하는건 어떤가요? 제작해보고 다른 사람들과 공유 해보세요.
 
-### **서비스 아이디어**
+### 개발 기간 : 2022.6.28 ~ 2022.7.6
 
-기존에 사용하려한 모델은 런타임이 길어 빠른 모델을 찾던중
+### Github [Front-end](https://github.com/SingToLive/creepy_art_gallery_frontend)
 
-새로 찾은 모델의 결과물이 기괴하여 으스스~미술관이란 주제로 제작했습니다.
+## 🧑 **팀 구성**
+* 4인 팀 프로젝트  <br>
+* 맡은 역할 : lead developer / back-end developer / front-end developer
 
-### **서비스 소개**
+<table>
+  <tr>
+    <td align="center"><strong>구분</strong></td>
+    <td align="center"><strong>Back-end</strong></td>
+    <td align="center"><strong>Front-end</strong></td>
+    <td align="center"><strong>Designer</strong></td>
+    <td align="center"><strong>AI Engineer</strong></td>	  
+  </tr>
+  <tr>
+    <td align="center"><strong>메인 페이지</strong></td>
+    <td align="center">이승태</td>
+    <td align="center">이승태</td>
+    <td align="center">이승태</td>
+    <td rowspan="4" align="center">전진영</td>
+  </tr>
+  <tr>
+    <td align="center"><strong>결과 페이지</strong></td>
+    <td align="center">이승태<br>윤가현</td>
+    <td align="center">이승태<br>윤가현</td>
+    <td align="center">이승태<br>윤가현</td>
+  </tr>
+  <tr>
+    <td align="center"><strong>로그인 페이지</strong></td>
+    <td align="center">김민재</td>
+    <td align="center">김민재</td>
+    <td align="center">김민재</td>
+  </tr>
+  <tr>
+    <td align="center"><strong>회원가입 페이지</strong></td>
+    <td align="center">김민재</td>
+    <td align="center">김민재</td>
+    <td align="center">김민재</td>
+  </tr>
+</table>
 
-**Style Transfer 를 사용한 유화제작 사이트**
+## ✨ Stack
+* Language : Python, Javascript
+* Framework : Django, DRF
+* Database : MySQL
 
-### 사용한 모델
+## 📖 Stack & Library Version
+<img src="https://img.shields.io/badge/python-3.9.12-brightgreen"> <img src="https://img.shields.io/badge/django-4.0.6-brightgreen"> <img src="https://img.shields.io/badge/django_rest_framework-3.13.1-brightgreen"> <img src="https://img.shields.io/badge/django_rest_framework_simple_jwt-5.2.0-brightgreen"> <img src="https://img.shields.io/badge/mysql_client-2.1.1-brightgreen"> <img src="https://img.shields.io/badge/tensorflow-2.9.1-brightgreen"> <img src="https://img.shields.io/badge/PyJWT-2.4.0-brightgreen"> <img src="https://img.shields.io/badge/urllib3-1.26.11-brightgreen">
 
-**TF-Hub를 통한 빠른 스타일 전이**
+## 🕹 주요 기능
+### 로그인 / 회원가입
+* JWT 토큰 방식으로 구현
+* JWT refresh token을 구현하여 로그인 상태 유지하게 끔 설정
+* USERNAME_FIELD를 사용하여 유저 아이디를 고유값으로 지정하여 중복 방지 기능 구현
 
-NST에 대한 원래 작업은 느리지만 Fast arbitrary image style transfer를 이용하여 빠른 이미지 스타일 전이를 통해 결과값을 얻는 모델을 사용했습니다.
+### 메인 페이지
+* 이미지 파일 업로드
+    * InMemoryUploadFile을 통해 이미지를 pill에서 django file 형태로 변환하는 기능 구현
 
-[TensorFlow Hub](https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256/1)
 
-- **역할 분담**
-    - **AI 모델 제작 : 진영**
-    - **백엔드, 프론트 담당 : 승태, 민재, 가현**
-        - 로그인, 로그아웃 : 민재
-        - 메인페이지 : 가현
-        - 결과페이지 : 승태
-- **발표자 및 영상촬영**
-    - **발표자 : 전진영**
-    - **영상촬영 : 김민재**
-
-### 🛠 개발 일정
+### 🛠 개발 일정
 ![](https://velog.velcdn.com/images/soyoyun/post/2ee594a0-4dea-4bc8-83f4-35cb947b4f12/image.png)
 
 
