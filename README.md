@@ -76,6 +76,9 @@
 * 이미지 파일 업로드
     * InMemoryUploadFile을 통해 이미지를 pill에서 django file 형태로 변환하는 기능 구현
 
+## 사용한 모델
+* [유화제작](https://colab.research.google.com/drive/1Y3kWDvbHkkTbSGDfq3jPFvTcvVwx7ELh?usp=sharing)
+
 
 ### 🛠 개발 일정
 ![](https://velog.velcdn.com/images/soyoyun/post/2ee594a0-4dea-4bc8-83f4-35cb947b4f12/image.png)
