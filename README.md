@@ -1,17 +1,5 @@
 # 👻 **으스스~미술관**
 
-## 목차
-1. 프로젝트 소개
-2. 팀 구성
-3. Stack
-4. Stack & Library Version
-5. 주요 기능
-6. TroubleShooting
-7. Architecture
-8. ERD
-9. API
-10. Layout
-
 ## 📄 **프로젝트 소개**
 사진의 분위기가 밋밋하신가요? 그렇담 쌀쌀한 분위기를 연출하는건 어떤가요? 제작해보고 다른 사람들과 공유 해보세요.
 
